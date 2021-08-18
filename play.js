@@ -8,6 +8,10 @@ const connect = () => {
 
   conn.setEncoding('utf8');
 
+  conn.addListener('data', data => {
+    console.log('Server say: ', data);
+  });
+
   return conn;
 }
 
