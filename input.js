@@ -23,6 +23,12 @@ const handleUserInput = (input) => {
   } else if (input === 'd') {
     connection.write('Move: right');
   }
+
+  if (input === '1') {
+    console.log('Keep going');
+  } else if (input === '2') {
+    console.log('New High Score!');
+  }
 };
 
 module.exports = { setupInput };
