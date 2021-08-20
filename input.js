@@ -1,3 +1,4 @@
+const { moves, outputs } = require('./constants');
 let connection;
 
 const setupInput = (conn) => {
@@ -14,20 +15,17 @@ const handleUserInput = (input) => {
   if (input === '\u0003'){
     process.exit();
   }
-  if (input === 'w'){
-    connection.write('Move: up');
-  } else if (input === 's') {
-    connection.write('Move: down');
-  } else if (input === 'a') {
-    connection.write('Move: left');
-  } else if (input === 'd') {
-    connection.write('Move: right');
+  
+  for (const key in moves) {
+    if (key === input) {
+      connection.write(moves[key]);
+    }
   }
 
-  if (input === '1') {
-    console.log('Keep going');
-  } else if (input === '2') {
-    console.log('New High Score!');
+  for (const key in outputs) {
+    if (key === input) {
+      console.log(outputs[key]);
+    }
   }
 };
 
