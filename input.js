@@ -1,6 +1,10 @@
 const { moves, outputs } = require('./constants');
 let connection;
 
+/**
+ * Set up User Interface
+ * Specifically, so that we can handle user input via stdin
+ */
 const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
@@ -11,11 +15,12 @@ const setupInput = (conn) => {
   return stdin;
 }
 
+//function that tells us what to do with the inputs 
 const handleUserInput = (input) => {
   if (input === '\u0003'){
     process.exit();
   }
-  
+
   for (const key in moves) {
     if (key === input) {
       connection.write(moves[key]);
@@ -29,4 +34,5 @@ const handleUserInput = (input) => {
   }
 };
 
+//module being exported to play file
 module.exports = { setupInput };
