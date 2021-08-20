@@ -20,8 +20,11 @@ Have fun and Good Luck.
 ## Instructions
 
 w - Move Up
+
 a - Move left
+
 s - Move down
+
 d - Move Right
 
 Press z and x for special messages in the server.
