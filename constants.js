@@ -1,4 +1,4 @@
-const IP = '192.168.2.168';
+const IP = 'localhost';
 const PORT =  50541;
 
 //object of inputs to control the snake
