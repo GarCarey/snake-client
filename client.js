@@ -1,3 +1,4 @@
+const args = process.argv.slice(2);
 const net = require('net');
 const { IP, PORT } = require('./constants');
 
@@ -15,7 +16,7 @@ const connect = () => {
   // initals above the snake when we connect
   conn.on('connect', () => {
     console.log('Successfully connected to game server');
-    conn.write("Name: GLC");
+    conn.write(`Name: ${args}`);
   });
 
   //prints out data return from the game server after specific actions 
