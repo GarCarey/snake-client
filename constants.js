@@ -11,8 +11,8 @@ const moves = {
 
 //object of inputs that will be printed
 const outputs = {
-  z: 'Keep going',
-  x: 'New High Score!'
+  z: 'Say: Keep going',
+  x: 'Say: New High Score!'
 }
 
 //values and objects being exported to input and client files
