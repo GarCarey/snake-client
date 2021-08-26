@@ -21,16 +21,10 @@ const handleUserInput = (input) => {
     process.exit();
   }
 
-  for (const key in moves) {
-    if (key === input) {
-      connection.write(moves[key]);
-    }
-  }
-
-  for (const key in outputs) {
-    if (key === input) {
-      console.log(outputs[key]);
-    }
+  if (moves[input]) {
+    connection.write(moves[input]);
+  } else if (outputs[input]) {
+    connection.write(outputs[input]);
   }
 };
 
