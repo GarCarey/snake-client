@@ -15,7 +15,7 @@ Have fun and Good Luck.
 ## Getting Started
 
 - Follow steps inside the [snek server repo](https://github.com/taniarascia/snek) to run the server side
-- Run the development snake client using the `node play.js` command.
+- Run the development snake client using the `node play.js` command and add your initials to the end of the command e.g. ```node play.js GLC```
 
 ## Instructions
 
